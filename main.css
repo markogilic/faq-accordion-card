@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*     font-family: 'Kumbh Sans', sans-serif;
+
+ */
+
+/* Josh Comeau css Reste https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.75rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  position: relative;
+  width: min(1440px, 100%);
+  height: 100vh;
+
+  background: linear-gradient(
+    0deg,
+    hsla(240, 73%, 65%, 1) 0%,
+    hsla(273, 75%, 66%, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 8rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.image {
+  position: absolute;
+  width: 270px;
+  height: 205px;
+  top: -23%;
+  background-image: url('images/illustration-woman-online-mobile.svg');
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.image::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('images/bg-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  top: 15%;
+  left: 0;
+}
+
+.card-faq {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  height: 545px;
+  border-radius: 1rem;
+  padding: 0 2em;
+  margin-top: 4rem;
+}
+
+.question {
+  padding: 1em 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question p {
+  font-weight: 700;
+  color: hsl(240, 6%, 50%);
+}
+
+.question.active p {
+  color: hsl(238, 29%, 16%);
+}
+
+.answer {
+  width: 90%;
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+  display: none;
+  color: hsl(240, 6%, 50%);
+}
+.faq {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  /*transform: rotate(180deg);*/
+  transition: 0.3s;
+}
+.rotate-reset {
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .card-faq {
+    width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  main::after {
+    content: '';
+    background-image: url('images/illustration-box-desktop.svg');
+    width: 191px;
+    height: 184px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 170px;
+  }
+
+  .image {
+    background-image: url('images/illustration-woman-online-desktop.svg')
+      no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    left: -100px;
+
+    width: 500px;
+    height: 500px;
+    transform: translateX(0);
+    transform: translateY(-35%);
+  }
+  .image::after {
+    content: '';
+    background-image: url('images/bg-pattern-desktop.svg');
+    width: 966px;
+    height: 945px;
+    left: calc(-966px / 2);
+    top: -350px;
+
+    /* background-position: bottom right; */
+  }
+
+  .question-wrap {
+    width: 50%;
+    padding: 1rem 2rem;
+  }
+  .question p:hover {
+    color: hsl(14, 88%, 65%);
+  }
+}

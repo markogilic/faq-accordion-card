@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 - [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-faq-accordion-card-animated-with-jquery-XB1H4bUBKh)
-- [Live Page](https://markogilic.github.io/interactive-card-details-form-main/)
+- [Live Page](https://markogilic.github.io/faq-accordion-card/)
 
 ## Author
 
